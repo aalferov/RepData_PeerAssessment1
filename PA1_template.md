@@ -17,17 +17,11 @@ library(scales)
 if(!file.exists("./data"))
 {dir.create("./data")}
 
-url <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
+url <- "http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
 fileName <- "repdata_Fdata_Factivity.zip"
 
 download.file(url, destfile = fileName)
-```
 
-```
-## Error in download.file(url, destfile = fileName): не поддерживаемая схема URL
-```
-
-```r
 unzip(fileName, exdir="data")
 
 df <- read.csv(file="./data/activity.csv",head=TRUE,sep=",")

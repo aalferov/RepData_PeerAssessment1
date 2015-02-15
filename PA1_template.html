@@ -197,16 +197,12 @@ library(scales)
 <pre><code class="r">if(!file.exists(&quot;./data&quot;))
 {dir.create(&quot;./data&quot;)}
 
-url &lt;- &quot;https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip&quot;
+url &lt;- &quot;http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip&quot;
 fileName &lt;- &quot;repdata_Fdata_Factivity.zip&quot;
 
 download.file(url, destfile = fileName)
-</code></pre>
 
-<pre><code>## Error in download.file(url, destfile = fileName): не поддерживаемая схема URL
-</code></pre>
-
-<pre><code class="r">unzip(fileName, exdir=&quot;data&quot;)
+unzip(fileName, exdir=&quot;data&quot;)
 
 df &lt;- read.csv(file=&quot;./data/activity.csv&quot;,head=TRUE,sep=&quot;,&quot;)
 df$date &lt;- as.Date(df$date)
