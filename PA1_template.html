@@ -183,7 +183,7 @@ hljs.initHighlightingOnLoad();
 
 <h4>Andrey Alferov</h4>
 
-<h4>Sunday, February 15, 2015</h4>
+<h4>Sunday, March 15, 2015</h4>
 
 <h3>Load required libraries</h3>
 
@@ -309,6 +309,8 @@ filter(per_interval, steps == as.numeric(max_steps))
 
 <h3>Create a new dataset that is equal to the original dataset but with the missing data filled in</h3>
 
+<h3>Missing values are replaced by mean values of steps for the particular time interval</h3>
+
 <pre><code class="r">df_new &lt;- df
 
 for (i in 1:nrow(df_new)){
@@ -371,7 +373,7 @@ round(difference)
 <pre><code>## [1] &quot;English_United States.1252&quot;
 </code></pre>
 
-<h3>Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day</h3>
+<h3>Create a new factor variable in the dataset with two levels вЂ“ вЂњweekdayвЂќ and вЂњweekendвЂќ indicating whether a given date is a weekday or weekend day</h3>
 
 <pre><code class="r">df_new$weekday &lt;- factor(weekdays(df_new$date) %in% c(&quot;Saturday&quot;,&quot;Sunday&quot;), 
                                   labels=c(&quot;weekday&quot;,&quot;weekend&quot;), ordered=FALSE)

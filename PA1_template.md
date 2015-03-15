@@ -1,7 +1,7 @@
 Analysis of Human Activity Pattern
 ========================================================
 #### Andrey Alferov
-#### Sunday, February 15, 2015
+#### Sunday, March 15, 2015
 
 ### Load required libraries
 
@@ -137,6 +137,7 @@ sum(is.na(df$steps))
 ```
 
 ### Create a new dataset that is equal to the original dataset but with the missing data filled in
+### Missing values are replaced by mean values of steps for the particular time interval
 
 ```r
 df_new <- df
